@@ -1,0 +1,30 @@
+#server.port = 8080
+##course micorservice
+#spring.cloud.gateway.routes[0].id: courseModule
+#spring.cloud.gateway.routes[0].uri: http://localhost:8081/course-service/
+#spring.cloud.gateway.routes[0].predicates[0]: Path=/course-service/**
+#
+##student microservice
+#spring.cloud.gateway.routes[1].id=studentModule
+#spring.cloud.gateway.routes[1].uri=http://localhost:8082/student-service
+#spring.cloud.gateway.routes[1].predicates[0]=Path=/student-service/**
+#  spring.application.name = api-getway
+#  spring.cloud.config.uri=http://localhost:8888
+
+#
+spring:
+  application:
+    name: api-getway
+#  cloud:
+#    config:
+#      uri: http://localhost:8888
+#    gateway:
+#      routes:
+#      - id: courseModule
+#        uri: http://localhost:8081/
+#        predicates:
+#        - Path=/course-service/**
+#      - id: studentModule
+#        uri: http://localhost:8082/student-service
+#        predicates:
+#        - Path=/student-service/**
