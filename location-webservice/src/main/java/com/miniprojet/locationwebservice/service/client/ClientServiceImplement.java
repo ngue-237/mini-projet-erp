@@ -13,4 +13,9 @@ public class ClientServiceImplement implements ClientServiceInterface {
     public Client getClientById(Long clientId) {
         return clientRepo.findById(clientId).get();
     }
+
+    @Override
+    public Client saveClient(Client clientSaved) {
+        return clientRepo.save(clientSaved);
+    }
 }
