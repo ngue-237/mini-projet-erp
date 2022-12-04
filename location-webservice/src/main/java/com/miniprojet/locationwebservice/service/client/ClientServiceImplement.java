@@ -29,7 +29,7 @@ public class ClientServiceImplement implements ClientServiceInterface {
 
     @Override
     public Client updateClientByEmail(String email, Client clientModified) {
-        System.out.println(clientModified);
+        //System.out.println(clientModified);
         Client clientDb = clientRepo.findByEmailIgnoreCase(email);
         if(Objects.nonNull(clientModified.getNom()) && !"".equalsIgnoreCase(clientModified.getNom())){
             clientDb.setNom(clientModified.getNom());
