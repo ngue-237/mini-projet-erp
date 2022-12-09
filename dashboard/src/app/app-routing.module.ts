@@ -32,6 +32,7 @@ import { PagesFaqComponent } from './pages/pages-faq/pages-faq.component';
 import { PagesLoginComponent } from './pages/pages-login/pages-login.component';
 import { PagesRegisterComponent } from './pages/pages-register/pages-register.component';
 import { UsersProfileComponent } from './pages/users-profile/users-profile.component';
+import { PagesClientComponent } from './pages/pages-client/pages-client.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -61,6 +62,7 @@ const routes: Routes = [
   { path: 'tabs', component: TabsComponent },
   { path: 'tooltips', component: TooltipsComponent },
   { path: 'pages-blank', component: PagesBlankComponent },
+  { path:  'pages-client',component: PagesClientComponent},
   { path: 'pages-contact', component: PagesContactComponent },
   { path: 'pages-error404', component: PagesError404Component },
   { path: 'pages-faq', component: PagesFaqComponent },
