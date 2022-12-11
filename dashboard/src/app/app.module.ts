@@ -43,6 +43,7 @@ import { FormsModule } from '@angular/forms';
 import { User } from './Models/user';
 import { UserModule } from './user/user.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -81,7 +82,6 @@ import { UserModule } from './user/user.module';
     PagesLoginComponent,
     PagesError404Component,
     PagesBlankComponent,
-    
   ],
   imports: [BrowserModule,
      AppRoutingModule,
