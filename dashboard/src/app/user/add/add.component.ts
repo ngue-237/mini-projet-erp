@@ -19,6 +19,7 @@ export class AddComponent implements OnInit {
 
   save(){
     this.userService.create(this.user).subscribe (res => {
+      //this.toastr.success('Employe a été ajouter','Ajout')
     console.log('User created!');
     this.router.navigateByUrl('/gestion-employe');});
   }

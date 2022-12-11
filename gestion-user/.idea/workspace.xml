@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0ca89f0-e790-4dac-80d0-08514e3a5a20" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../dashboard/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dashboard/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dashboard/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../dashboard/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dashboard/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../dashboard/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dashboard/src/app/Models/client.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dashboard/src/app/Models/contrat-loc.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dashboard/src/app/Services/client.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dashboard/src/app/Services/contrat-loc.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dashboard/src/app/location/list/list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../dashboard/src/app/location/list/list.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/miniprojet/gestionuser/Controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miniprojet/gestionuser/Controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/miniprojet/gestionuser/Controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/miniprojet/gestionuser/Controllers/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../location-webservice/src/main/java/com/miniprojet/locationwebservice/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../location-webservice/src/main/java/com/miniprojet/locationwebservice/controller/ClientController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +88,8 @@
       <workItem from="1670599132343" duration="1270000" />
       <workItem from="1670600890463" duration="1844000" />
       <workItem from="1670602840888" duration="22695000" />
-      <workItem from="1670771481921" duration="762000" />
+      <workItem from="1670771481921" duration="1110000" />
+      <workItem from="1670776764376" duration="687000" />
     </task>
     <servers />
   </component>
