@@ -82,7 +82,6 @@ import { UserModule } from './user/user.module';
     PagesLoginComponent,
     PagesError404Component,
     PagesBlankComponent,
-    PagesClientComponent,
   ],
   imports: [BrowserModule,
      AppRoutingModule,
