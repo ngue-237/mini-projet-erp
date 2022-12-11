@@ -33,6 +33,7 @@ import { PagesLoginComponent } from './pages/pages-login/pages-login.component';
 import { PagesRegisterComponent } from './pages/pages-register/pages-register.component';
 import { UsersProfileComponent } from './pages/users-profile/users-profile.component';
 import { UserModule } from './user/user.module';
+import { LocationModule } from './location/location.module';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -68,7 +69,8 @@ const routes: Routes = [
   { path: 'pages-login', component: PagesLoginComponent },
   { path: 'pages-register', component: PagesRegisterComponent },
   { path: 'user-profile', component: UsersProfileComponent },
-  { path:'gestion-employe',loadChildren: () => UserModule }
+  { path: 'gestion-employe', loadChildren: () => UserModule },
+  { path: 'location', loadChildren: () => LocationModule },
 ];
 
 @NgModule({
