@@ -24,11 +24,11 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
               "src/assets/js/main.js",
-              "src/node_modules/bootstrap/dist/jsbootstrap.js"
+              "node_modules/bootstrap/dist/js/bootstrap.js"
             ]
           },
           "configurations": {

@@ -18,6 +18,10 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 public class UserController {
     @Autowired
     UserService userService;
+    @GetMapping(value = "login")
+    public String login(){
+        return "login was sucessful";
+    }
     @GetMapping
     public Iterable<User> getUsers(){
         return userService.getUsers();

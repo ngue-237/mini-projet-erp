@@ -42,7 +42,7 @@
                             <td>
                                 <div class="row">
                                     <a class="col-md-3" [routerLink]="['/gestion-employe/edit/', user.id]"><i class="ri-edit-box-fill icon edit"></i></a>
-                                    <button class="col-md-3 ri-delete-bin-2-fill icon delete" (click)="delete(user.id)">  </button>
+                                    <button type="submit" class="col-md-3" (click)="delete(user.id)"> <i class="ri-delete-bin-2-fill icon delete" ></i> </button>
                                 </div> 
                             </td>
                          </tr>

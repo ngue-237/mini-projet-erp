@@ -14,7 +14,7 @@ export class UserService {
     })
   }
   constructor(private http:HttpClient) { }
-  private baseUrl = "http://localhost:8082/userManager/";
+  private baseUrl = "http://localhost:8080/userManager/";
 
   getUsers(): Observable<User[]>{
     return this.http.get<User[]>(`${this.baseUrl}`);
@@ -32,7 +32,7 @@ export class UserService {
   }
 
   delete(id: String){
-    return this.http.delete<User>(this.baseUrl+'/'+ id, this.httpOptions)
+    return this.http.delete<User>(this.baseUrl+ id, this.httpOptions)
   }
 
 }
