@@ -14,9 +14,9 @@ export class ClientService {
   };
   constructor(private http: HttpClient) {}
   private baseUrl =
-    'http://localhost:8080/car-location-service/';
+    'http://localhost:8080/car-location-service/client';
   getCLient(): Observable<Client[]> {
-    return this.http.get<Client[]>(`${this.baseUrl}/client/all-clients`);
+    return this.http.get<Client[]>(`${this.baseUrl}/all-clients`);
   }
   create(client: Client): Observable<Client> {
     return this.http.post<Client>(

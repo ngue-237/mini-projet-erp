@@ -70,7 +70,8 @@ const routes: Routes = [
   { path: 'pages-login', component: PagesLoginComponent },
   { path: 'pages-register', component: PagesRegisterComponent },
   { path: 'user-profile', component: UsersProfileComponent },
-  { path:'gestion-employe',loadChildren: () => UserModule }
+  { path:'gestion-employe',loadChildren: () => UserModule },
+  { path:'gestion-location',loadChildren: () => LocationModule }
 ];
 
 @NgModule({
