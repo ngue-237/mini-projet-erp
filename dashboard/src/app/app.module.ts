@@ -43,7 +43,6 @@ import { FormsModule } from '@angular/forms';
 import { User } from './Models/user';
 import { UserModule } from './user/user.module';
 
-
 @NgModule({
   declarations: [
     AppComponent,
