@@ -1,0 +1,56 @@
+<main id="main" class="main">
+    <div class="pagetitle">
+       <h1>Liste des Employés</h1>
+       <nav>
+          <ol class="breadcrumb">
+             <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+             <li class="breadcrumb-item active">Liste_Employe</li>
+          </ol>
+       </nav>
+    </div>
+    <section class="section">
+       <div class="row">
+          <div class="col-lg-12">
+             <div class="card">
+                <div class="card-body">
+                   <h5 class="card-title">Datatables</h5>
+                   <a [routerLink]="['/gestion-employe/add']">Ajouter un Employe</a>
+                   <table class="table datatable">
+                      <thead>
+                         <tr>
+                            <th scope="col">cin</th>
+                            <th scope="col">Nom</th>
+                            <th scope="col">Prenom</th>
+                            <th scope="col">Telephone</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Adresse</th>
+                            <th scope="col">Role</th>
+                            <th scope="col">Mot de passe</th>
+                            <th>Action</th>
+                         </tr>
+                      </thead>
+                      <tbody>
+                         <tr *ngFor = "let user of users">
+                            <th scope="row">{{ user.cin }}</th>
+                            <td>{{ user.nom }}</td>
+                            <td>{{ user.prenom }}</td>
+                            <td>{{ user.tel }}</td>
+                            <td>{{ user.email }}</td>
+                            <td>{{ user.adresse }}</td>
+                            <td>{{ user.role }}</td>
+                            <td>{{ user.mdp }}</td>
+                            <td>
+                                <div class="row">
+                                    <a class="col-md-3" [routerLink]="['/gestion-employe/edit/', user.id]"><i class="ri-edit-box-fill icon edit"></i></a>
+                                    <button class="col-md-3 ri-delete-bin-2-fill icon delete" (click)="delete(user.id)">  </button>
+                                </div> 
+                            </td>
+                         </tr>
+                      </tbody>
+                   </table>
+                </div>
+             </div>
+          </div>
+       </div>
+    </section>
+ </main>

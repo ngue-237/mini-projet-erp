@@ -38,7 +38,10 @@ import { PagesRegisterComponent } from './pages/pages-register/pages-register.co
 import { PagesLoginComponent } from './pages/pages-login/pages-login.component';
 import { PagesError404Component } from './pages/pages-error404/pages-error404.component';
 import { PagesBlankComponent } from './pages/pages-blank/pages-blank.component';
-import { PagesClientComponent } from './pages/pages-client/pages-client.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { User } from './Models/user';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [
@@ -78,9 +81,13 @@ import { PagesClientComponent } from './pages/pages-client/pages-client.componen
     PagesLoginComponent,
     PagesError404Component,
     PagesBlankComponent,
-    PagesClientComponent,
+    
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule,
+     AppRoutingModule,
+     FormsModule,
+     HttpClientModule,
+    ],
   providers: [],
   bootstrap: [AppComponent],
 })
