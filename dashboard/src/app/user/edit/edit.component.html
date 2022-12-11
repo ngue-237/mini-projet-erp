@@ -14,7 +14,7 @@
           <div class="col-lg-6">
             <div class="card">
                 <div class="card-body">
-                <h5 class="card-title">Modifierles données de cet employé</h5>
+                <h5 class="card-title">Modifier les données de cet employé</h5>
                 <form class="row g-3" #form="ngForm">
                     <div class="col-md-12"> <input type="number" class="form-control" placeholder="cin"  name="cin" [(ngModel)]="user.cin" #id=ngModel required pattern="[0-9]+$"></div>
                     <div class="alert alert-danger"*ngIf="id.invalid && id.touched">

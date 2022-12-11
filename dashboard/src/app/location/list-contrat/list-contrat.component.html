@@ -4,7 +4,7 @@
        <nav>
           <ol class="breadcrumb">
              <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
-             <li class="breadcrumb-item active">clients</li>
+             <li class="breadcrumb-item active">contrats</li>
           </ol>
        </nav>
     </div>
@@ -14,27 +14,27 @@
              <div class="card">
                 <div class="card-body">
                    <h5 class="card-title">Datatables</h5>
-                   <a [routerLink]="['/gestion-location/client/add']">Ajouter un Client</a>
+                   <a [routerLink]="['/gestion-location/contrat/add']">Ajouter un Contrat de location</a>
                    <table class="table datatable">
                       <thead>
                          <tr>
-                            <th scope="col">Nom</th>
-                            <th scope="col">Prenom</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">cni</th>
+                            <th scope="col">reference</th>
+                            <th scope="col">etat du vehicule</th>
+                            <th scope="col">date debut location</th>
+                            <th scope="col">date fin location</th>
                             <th>Action</th>
                          </tr>
                       </thead>
                       <tbody>
-                         <tr *ngFor = "let client of clients">
-                            <td>{{ client.nom }}</td>
-                            <td>{{ client.prenom }}</td>
-                            <td>{{ client.email }}</td>
-                            <td>{{ client.cni }}</td>
+                         <tr *ngFor = "let contrat of contrats">
+                            <td>{{ contrat.ref }}</td>
+                            <td>{{ contrat.etatVehicule }}</td>
+                            <td>{{ contrat.date_deb_location }}</td>
+                            <td>{{ contrat.date_fin_location }}</td>
                             <td>
                                 <div class="row">
-                                    <a class="col-md-3" [routerLink]="['/gestion-location/client/edit/', client.id]"><i class="ri-edit-box-fill icon edit"></i></a>
-                                    <button class="col-md-3 ri-delete-bin-2-fill icon delete" (click)="delete(client.id)">  </button>
+                                    <a class="col-md-3" [routerLink]="['/gestion-location/contrat/edit/', contrat.ref]"><i class="ri-edit-box-fill icon edit"></i></a>
+                                    <button class="col-md-3 ri-delete-bin-2-fill icon delete" (click)="delete(contrat.ref)">  </button>
                                 </div>
                             </td>
                          </tr>

@@ -42,6 +42,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { User } from './Models/user';
 import { UserModule } from './user/user.module';
+import { LoginComponent } from './authentification/login/login.component';
 
 @NgModule({
   declarations: [

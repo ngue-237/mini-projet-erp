@@ -71,7 +71,8 @@ const routes: Routes = [
   { path: 'pages-register', component: PagesRegisterComponent },
   { path: 'user-profile', component: UsersProfileComponent },
   { path:'gestion-employe',loadChildren: () => UserModule },
-  { path:'gestion-location',loadChildren: () => LocationModule }
+  { path:'gestion-location',loadChildren: () => LocationModule },
+  { path:'login',loadChildren: () => AuthentificationModule }
 ];
 
 @NgModule({

@@ -7,13 +7,19 @@ import { AddComponent } from './add/add.component';
 import { ListComponent } from './list/list.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ListContratComponent } from './list-contrat/list-contrat.component';
+import { AddContratComponent } from './add-contrat/add-contrat.component';
+import { EditContratComponent } from './edit-contrat/edit-contrat.component';
 
 
 @NgModule({
   declarations: [
     EditComponent,
     AddComponent,
-    ListComponent
+    ListComponent,
+    ListContratComponent,
+    AddContratComponent,
+    EditContratComponent
   ],
   imports: [
     CommonModule,

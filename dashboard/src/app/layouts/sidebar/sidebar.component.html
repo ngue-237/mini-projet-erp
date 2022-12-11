@@ -11,9 +11,31 @@
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" routerLink="/gestion-location">
-        <i class="bi bi-grid"></i> <span>Gestion Locations</span>
+      <a
+        class="nav-link collapsed"
+        data-bs-target="#forms-nav"
+        data-bs-toggle="collapse"
+        href="#"
+      >
+        <i class="bi bi-journal-text"></i><span>Gestion Locations</span
+        ><i class="bi bi-chevron-down ms-auto"></i>
       </a>
+      <ul
+        id="forms-nav"
+        class="nav-content collapse"
+        data-bs-parent="#sidebar-nav"
+      >
+        <li>
+          <a routerLink="/gestion-location/client">
+            <i class="bi bi-circle"></i><span>Clients</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/gestion-location/contrat">
+            <i class="bi bi-circle"></i><span>Contrat de location</span>
+          </a>
+        </li>
+      </ul>
     </li>
     <li class="nav-item">
       <a class="nav-link" routerLink="/pages-client">

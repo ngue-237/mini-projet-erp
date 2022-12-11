@@ -5,7 +5,7 @@
        <nav>
           <ol class="breadcrumb">
              <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
-             <li class="breadcrumb-item">Ajout</li>
+             <li class="breadcrumb-item">Modif</li>
           </ol>
        </nav>
     </div>
@@ -14,21 +14,20 @@
           <div class="col-lg-6">
             <div class="card">
                 <div class="card-body">
-                <h5 class="card-title">Enregistrer un nouveau client</h5>
+                <h5 class="card-title">Modifier ce contrat</h5>
                 <form class="row g-3" #form="ngForm">
-                    <div class="col-md-12"> <input type="text" class="form-control" placeholder="cin" name="cin" [(ngModel)]="client.cni" #id=ngModel required></div>
+                    <div class="col-md-12"> <input type="text" class="form-control" placeholder="cin" name="cin" [(ngModel)]="contrat.ref" #id=ngModel required></div>
                     <div class="alert alert-danger"*ngIf="id.invalid && id.touched">
-                        <div *ngIf="id.errors?.required"> Entrez votre Cni</div>
+                        <div *ngIf="id.errors?.required"> Entrez la reference du vehicule</div>
                     </div>
-                    <div class="col-md-12"> <input type="text" class="form-control" placeholder="Nom" name="nom"[(ngModel)]="client.nom" required #nom=ngModel></div>
+                    <div class="col-md-12"> <input type="text" class="form-control" placeholder="Nom" name="nom"[(ngModel)]="contrat.date_deb_location" required #nom=ngModel></div>
                     <div class="alert alert-danger"*ngIf="nom.invalid && nom.touched">
-                        <div *ngIf="id.errors?.required"> Entrez votre Nom</div>
+                        <div *ngIf="id.errors?.required"> Entrez la date de debut de la location</div>
                     </div>
-                    <div class="col-md-12"> <input type="text" class="form-control" placeholder="Prenom" name="prenom"[(ngModel)]="client.prenom"></div>
-                    <div class="col-md-12"> <input type="email" class="form-control" placeholder="Email" name="email"[(ngModel)]="client.email" #email=ngModel required pattern="[a-z0-9-.]+@[a-z-]+\.[a-z]{2,3}$"></div>
+                    <div class="col-md-12"> <input type="text" class="form-control" placeholder="Prenom" name="prenom"[(ngModel)]="contrat.date_fin_location"></div>
+                    <div class="col-md-12"> <input type="email" class="form-control" placeholder="Email" name="email"[(ngModel)]="contrat.etatVehicule" #email=ngModel required></div>
                     <div class="alert alert-danger"*ngIf="email.invalid && email.touched">
-                        <div *ngIf="email.errors?.required"> Entrez votre Email</div>
-                        <div *ngIf="email.errors?.pattern">Email doit être sous le format exemple@exemple.exemple.com</div>
+                        <div *ngIf="email.errors?.required"> Entrez la date de fin de la location</div>
                     </div>  
                     <!-- <div class="col-md-2"> <input type="text" class="form-control" placeholder="Zip"></div> -->
                     <div class="text-center"> <button type="submit" class="btn btn-primary"[disabled]="form.invalid" (click)="save()">Submit</button> <button type="reset" class="btn btn-secondary">Reset</button></div>

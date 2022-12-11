@@ -29,9 +29,9 @@ export class ClientService {
     return this.http.get<Client>(this.baseUrl + '/' + +id);
   }
 
-  update(id: number, client: Client): Observable<Client> {
+  update(email:string, client: Client): Observable<Client> {
     return this.http.put<Client>(
-      this.baseUrl + id,
+      this.baseUrl+'/update/' + email,
       JSON.stringify(client),
       this.httpOptions
     );
