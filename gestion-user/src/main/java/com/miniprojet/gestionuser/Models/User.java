@@ -9,15 +9,19 @@ import org.springframework.data.mongodb.core.mapping.Field;
 public class User {
     @Id
     private String id;
-    @Field("name")
+    @Field("cin")
+    private Number cin=123546;
+    @Field("nom")
     private String nom="WEM";
-    @Field("firstname")
+    @Field("mdp")
+    private String mdp;
+    @Field("prenom")
     private String prenom="therese";
-    @Field("address")
+    @Field("adresse")
     private  String adresse;
-    @Field("phone")
+    @Field("tel")
     private Number tel;
-    @Field("mail")
+    @Field("email")
     private String email;
     @Field("role")
     private  String role;
