@@ -21,14 +21,14 @@ export class UserService {
   }
   create(user:User): Observable<User> {
     return this.http.post<User>(this.baseUrl, JSON.stringify(user), this.httpOptions)
-  }  
+  }
   getById(id:string): Observable<User> {
     return this.http.get<User>(this.baseUrl +'/'+  + id)
   }
 
   update(id:string,user:User): Observable<User> {
     return this.http.put<User>(this.baseUrl  + id, JSON.stringify(user), this.httpOptions)
-   
+
   }
 
   delete(id: String){
