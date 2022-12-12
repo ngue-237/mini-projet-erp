@@ -40,16 +40,12 @@ import { PagesError404Component } from './pages/pages-error404/pages-error404.co
 import { PagesBlankComponent } from './pages/pages-blank/pages-blank.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { User } from './Models/user';
-import { UserModule } from './user/user.module';
+// import { UserModule } from './user/user.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    SidebarComponent,
     DashboardComponent,
     AlertsComponent,
     AccordionComponent,
@@ -82,6 +78,9 @@ import { UserModule } from './user/user.module';
     PagesLoginComponent,
     PagesError404Component,
     PagesBlankComponent,
+    HeaderComponent,
+    SidebarComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule,
      AppRoutingModule,

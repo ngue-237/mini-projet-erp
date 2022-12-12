@@ -14,7 +14,7 @@ export class UserService {
     })
   }
   constructor(private http:HttpClient) { }
-  private baseUrl = "http://localhost:8080/userManager/";
+  private baseUrl = "/api/userManager/";
 
   getUsers(): Observable<User[]>{
     return this.http.get<User[]>(`${this.baseUrl}`);

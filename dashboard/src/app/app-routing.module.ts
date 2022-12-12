@@ -32,9 +32,10 @@ import { PagesFaqComponent } from './pages/pages-faq/pages-faq.component';
 import { PagesLoginComponent } from './pages/pages-login/pages-login.component';
 import { PagesRegisterComponent } from './pages/pages-register/pages-register.component';
 import { UsersProfileComponent } from './pages/users-profile/users-profile.component';
-import { UserModule } from './user/user.module';
 import { LocationModule } from './location/location.module';
+import { UserModule } from './user/user.module';
 import { AuthentificationModule } from './authentification/authentification.module';
+import { VehiculeModule } from './vehicule/vehicule.module';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -72,7 +73,9 @@ const routes: Routes = [
   { path: 'user-profile', component: UsersProfileComponent },
   { path:'gestion-employe',loadChildren: () => UserModule },
   { path:'gestion-location',loadChildren: () => LocationModule },
-  { path:'login',loadChildren: () => AuthentificationModule }
+  { path:'login',loadChildren: () => AuthentificationModule },
+  { path:'gestion-vehicule',loadChildren: () => VehiculeModule }
+
 ];
 
 @NgModule({

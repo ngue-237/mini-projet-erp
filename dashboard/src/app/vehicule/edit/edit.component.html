@@ -1,0 +1,61 @@
+
+<main id="main" class="main">
+    <div class="pagetitle">
+       <h1>Form Layouts</h1>
+       <nav>
+          <ol class="breadcrumb">
+             <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+             <li class="breadcrumb-item">Modif</li>
+          </ol>
+       </nav>
+    </div>
+    <section class="section">
+       <div class="row">
+          <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                <h5 class="card-title">Modifier les données de ce Vehicule</h5>
+                <form class="row g-3" #form="ngForm">
+                    <div class="col-md-12"> <input type="text" class="form-control" placeholder="matricule" name="matricule" [(ngModel)]="vehicule.matricule" #id=ngModel required ></div>
+                    <div class="alert alert-danger"*ngIf="id.invalid && id.touched">
+                        <div *ngIf="id.errors?.required">saisir le matricule </div>
+                    </div>
+                    <div class="col-md-12"> <input type="text" class="form-control" placeholder="marque" name="marque" [(ngModel)]="vehicule.marque" #marque=ngModel required ></div>
+                    <div class="alert alert-danger"*ngIf="marque.invalid && marque.touched">
+                        <div *ngIf="id.errors?.required">saisir la marque du vehicule</div>
+                    </div>
+                    <div class="col-md-12"> <input type="text" class="form-control" placeholder="Model" name="model"[(ngModel)]="vehicule.model" required #model=ngModel></div>
+                    <div class="alert alert-danger"*ngIf="model.invalid && model.touched">
+                        <div *ngIf="id.errors?.required"> donnez le model</div>
+                    </div>
+                    <div class="col-md-12"> <input type="text" class="form-control" placeholder="couleur" name="couleur"[(ngModel)]="vehicule.couleur"></div>
+                    <div class="col-md-12"> <input type="number" class="form-control" placeholder="prix" name="prix" [(ngModel)]="vehicule.prix" #prix=ngModel required pattern="[0-9]+$"></div>
+                    <div class="alert alert-danger"*ngIf="prix.invalid && prix.touched">
+                        <div *ngIf="id.errors?.required"> Entrez le prix </div>
+                        <div *ngIf="id.errors?.pattern">Entrez 8 chiffres de 0 à 9</div>
+                    </div> 
+                    <div class="col-md-12"> <input type="text" class="form-control" placeholder="num_assurence" name="num_assurence"[(ngModel)]="vehicule.num_assurence" #num_assurence=ngModel required ></div>
+                    <div class="alert alert-danger"*ngIf="num_assurence.invalid && num_assurence.touched">
+                        <div *ngIf="id.errors?.required">saisir le numero d'Num_assurence</div>
+                    </div>
+                    <div class="col-md-12"> <input type="text" class="form-control" placeholder="visit_tech" name="visit_tech"[(ngModel)]="vehicule.visit_tech" required #visit=ngModel></div>
+                    <div class="alert alert-danger"*ngIf="visit.invalid && visit.touched">
+                        <div *ngIf="id.errors?.required"> Entrez la date de la dernière visite</div>
+                    </div>
+                    <div class="col-md-12"> <input type="text" class="form-control" placeholder="categorie" name="categorie"[(ngModel)]="vehicule.categorie" required #categorie=ngModel></div>
+                    <div class="alert alert-danger"*ngIf="categorie.invalid && categorie.touched">
+                        <div *ngIf="id.errors?.required"> Entrez la categorie</div>
+                    
+                    </div>
+                    <div class="col-md-12"> <input type="text" class="form-control" placeholder="carburant_motor" name="carburant_motor"[(ngModel)]="vehicule.carburant_motor" required #carbu=ngModel></div>
+                    <div class="alert alert-danger"*ngIf="carbu.invalid && carbu.touched">
+                        <div *ngIf="id.errors?.required"> Entrez le type de carburant </div>
+                    </div>
+                    <div class="text-center"> <button type="submit" class="btn btn-primary"[disabled]="form.invalid" (click)="update()">Submit</button> <button type="reset" class="btn btn-secondary">Reset</button></div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+ </section>
+</main>

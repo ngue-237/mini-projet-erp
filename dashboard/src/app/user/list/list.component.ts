@@ -20,7 +20,12 @@ export class ListComponent implements OnInit {
   }
   delete(id:string){
     console.log("test");
-    this.userService.delete(id).subscribe();
+    this.userService.delete(id).subscribe(res=>
+      {this.ngOnInit();},
+      error=>{
+        console.log(error);
+        
+      });
    }
 
 }

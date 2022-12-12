@@ -14,7 +14,7 @@ export class ContratService {
     })
   }
   constructor(private http:HttpClient) { }
-  private baseUrl = "http://localhost:8080/car-location-service/contrat-loctation";
+  private baseUrl = "/api/car-location-service/contrat-loctation";
 
   getContrats(): Observable<ContratLoc[]>{
     return this.http.get<ContratLoc[]>(`${this.baseUrl}`);

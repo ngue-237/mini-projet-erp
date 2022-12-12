@@ -16,7 +16,7 @@
                 <div class="card-body">
                 <h5 class="card-title">Enregistrer un nouveau client</h5>
                 <form class="row g-3" #form="ngForm">
-                    <div class="col-md-12"> <input type="text" class="form-control" placeholder="cin" name="cin" [(ngModel)]="client.cni" #id=ngModel required></div>
+                    <div class="col-md-12"> <input type="text" class="form-control" placeholder="cni" name="cin" [(ngModel)]="client.cni" #id=ngModel required></div>
                     <div class="alert alert-danger"*ngIf="id.invalid && id.touched">
                         <div *ngIf="id.errors?.required"> Entrez votre Cni</div>
                     </div>
